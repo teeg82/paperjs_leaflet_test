@@ -1,0 +1,97 @@
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+    <script src="node_modules/leaflet/dist/leaflet-src.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="node_modules/jquery/dist/jquery.js" type="application/javascript"></script>
+    <script src="node_modules/paper/dist/paper-core.js" type="application/javascript"></script>
+    <script src="node_modules/requirejs/require.js" type="application/javascript"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="icons" style="display:none;">
+        <img id="metar_IB" src="images/IB_s.png"/>
+        <img id="metar_IC" src="images/IC_s.png"/>
+        <img id="metar_IV" src="images/IV_s.png"/>
+        <img id="metar_MB" src="images/MB_s.png"/>
+        <img id="metar_MC" src="images/MC_s.png"/>
+        <img id="metar_MV" src="images/MV_s.png"/>
+        <img id="metar_VC" src="images/VC_s.png"/>
+        <img id="metar_VU" src="images/VU_s.png"/>
+        <img id="metar_NULL" src="images/NULL_s.png"/>
+
+        <img id="metar_IB_sig" src="images/IB_sigwx_s.png"/>
+        <img id="metar_IC_sig" src="images/IC_sigwx_s.png"/>
+        <img id="metar_IV_sig" src="images/IV_sigwx_s.png"/>
+        <img id="metar_MB_sig" src="images/MB_sigwx_s.png"/>
+        <img id="metar_MC_sig" src="images/MC_sigwx_s.png"/>
+        <img id="metar_MV_sig" src="images/MV_sigwx_s.png"/>
+        <img id="metar_VC_sig" src="images/VC_sigwx_s.png"/>
+        <img id="metar_VU_sig" src="images/VU_sigwx_s.png"/>
+        <img id="metar_NULL_sig" src="images/NULL_sigwx_s.png"/>
+
+        <img id="taf_IB" src="images/IB_s_taf.png"/>
+        <img id="taf_IC" src="images/IC_s_taf.png"/>
+        <img id="taf_IV" src="images/IV_s_taf.png"/>
+        <img id="taf_MB" src="images/MB_s_taf.png"/>
+        <img id="taf_MC" src="images/MC_s_taf.png"/>
+        <img id="taf_MV" src="images/MV_s_taf.png"/>
+        <img id="taf_VC" src="images/VC_s_taf.png"/>
+        <img id="taf_VU" src="images/VU_s_taf.png"/>
+        <img id="taf_NULL" src="images/NULL_s_taf.png"/>
+
+        <img id="taf_IB_sig" src="images/IB_sigwx_s_taf.png"/>
+        <img id="taf_IC_sig" src="images/IC_sigwx_s_taf.png"/>
+        <img id="taf_IV_sig" src="images/IV_sigwx_s_taf.png"/>
+        <img id="taf_MB_sig" src="images/MB_sigwx_s_taf.png"/>
+        <img id="taf_MC_sig" src="images/MC_sigwx_s_taf.png"/>
+        <img id="taf_MV_sig" src="images/MV_sigwx_s_taf.png"/>
+        <img id="taf_VC_sig" src="images/VC_sigwx_s_taf.png"/>
+        <img id="taf_VU_sig" src="images/VU_sigwx_s_taf.png"/>
+        <img id="taf_NULL_sig" src="images/NULL_sigwx_s_taf.png"/>
+
+        <img id="wind_barb_5" src="images/wind_barb_5kt_s.png"/>
+        <img id="wind_barb_10" src="images/wind_barb_10kt_s.png"/>
+        <img id="wind_barb_15" src="images/wind_barb_15kt_s.png"/>
+        <img id="wind_barb_20" src="images/wind_barb_20kt_s.png"/>
+        <img id="wind_barb_25" src="images/wind_barb_25kt_s.png"/>
+        <img id="wind_barb_30" src="images/wind_barb_30kt_s.png"/>
+        <img id="wind_barb_35" src="images/wind_barb_35kt_s.png"/>
+        <img id="wind_barb_40" src="images/wind_barb_40kt_s.png"/>
+        <img id="wind_barb_45" src="images/wind_barb_45kt_s.png"/>
+        <img id="wind_barb_50" src="images/wind_barb_50kt_s.png"/>
+        <img id="wind_barb_55" src="images/wind_barb_55kt_s.png"/>
+        <img id="wind_barb_60" src="images/wind_barb_60kt_s.png"/>
+        <img id="wind_barb_65" src="images/wind_barb_65kt_s.png"/>
+        <img id="wind_barb_70" src="images/wind_barb_70kt_s.png"/>
+        <img id="wind_barb_75" src="images/wind_barb_75kt_s.png"/>
+        <img id="wind_barb_80" src="images/wind_barb_80kt_s.png"/>
+        <img id="wind_barb_85" src="images/wind_barb_85kt_s.png"/>
+        <img id="wind_barb_90" src="images/wind_barb_90kt_s.png"/>
+        <img id="wind_barb_95" src="images/wind_barb_95kt_s.png"/>
+        <img id="wind_barb_100" src="images/wind_barb_100kt_s.png"/>
+        <img id="wind_barb_105" src="images/wind_barb_105kt_s.png"/>
+        <img id="wind_barb_110" src="images/wind_barb_110kt_s.png"/>
+        <img id="wind_barb_115" src="images/wind_barb_115kt_s.png"/>
+        <img id="wind_barb_120" src="images/wind_barb_120kt_s.png"/>
+        <img id="wind_barb_125" src="images/wind_barb_125kt_s.png"/>
+        <img id="wind_barb_130" src="images/wind_barb_130kt_s.png"/>
+        <img id="wind_barb_135" src="images/wind_barb_135kt_s.png"/>
+        <img id="wind_barb_140" src="images/wind_barb_140kt_s.png"/>
+        <img id="wind_barb_145" src="images/wind_barb_145kt_s.png"/>
+        <img id="wind_barb_150" src="images/wind_barb_150kt_s.png"/>
+        <img id="wind_barb_155" src="images/wind_barb_155kt_s.png"/>
+        <img id="wind_barb_160" src="images/wind_barb_160kt_s.png"/>
+        <img id="wind_barb_165" src="images/wind_barb_165kt_s.png"/>
+        <img id="wind_barb_170" src="images/wind_barb_170kt_s.png"/>
+        <img id="wind_barb_175" src="images/wind_barb_175kt_s.png"/>
+        <img id="wind_barb_180" src="images/wind_barb_180kt_s.png"/>
+        <img id="wind_barb_185" src="images/wind_barb_185kt_s.png"/>
+        <img id="wind_barb_190" src="images/wind_barb_190kt_s.png"/>
+        <img id="wind_barb_195" src="images/wind_barb_195kt_s.png"/>
+        <img id="wind_barb_200" src="images/wind_barb_200kt_s.png"/>
+    </div>
+    <script src="js/app.js" type="application/javascript"></script>
+</body>
+</html>

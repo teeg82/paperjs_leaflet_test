@@ -1,0 +1,21 @@
+{
+  "name": "paperjs_test",
+  "version": "1.0.0",
+  "description": "CFPS map prototype using paperjs",
+  "main": "server.js",
+  "dependencies": {
+    "connect": "^3.5.0",
+    "jquery": "^3.1.1",
+    "leaflet": "^1.0.1",
+    "paper": "^0.10.2",
+    "requirejs": "^2.3.2",
+    "serve-static": "^1.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Paul Richter",
+  "license": "ISC"
+}

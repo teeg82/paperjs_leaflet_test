@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div#map {
+    height: 100%;
+    width: 100%;
+}
+
+.cfps-popup {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    background-color: #FFF;
+    width: 160px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid rgba(212, 212, 215, 0.6);
+    box-shadow: 5px 4px 7px 1px rgba(0, 0, 0, 0.18);
+}
+
+.cfps-popup hr {
+    margin: 3px;
+}
